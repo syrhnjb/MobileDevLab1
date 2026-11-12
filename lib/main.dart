@@ -1,5 +1,7 @@
 
+import 'package:first_app/custom_text.dart';
 import 'package:flutter/material.dart';
+import 'custom_button.dart';
 
 void clicked(){
   print("the BUTTON Is clicked");
@@ -22,18 +24,11 @@ void main(){
             mainAxisSize: MainAxisSize.min,
             children: [
               Center(
-                child: Text(
-                  "Hello World", 
-                  style: TextStyle(color: Colors.deepPurple,
-                  fontSize: 70,
-                )
-               )
-              ),
-              TextButton(onPressed: clicked, child: Text("Click me!!", 
-              style: TextStyle(color: Colors.black, fontSize:40,
-              )
-             )
-            )
+                child: CustomText("Hi")),
+              CustomText("World"),
+              CustomText("Hello"),
+              CustomButton(),
+              Text("Morning")
             ],
           ),
         ),
